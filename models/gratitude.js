@@ -12,3 +12,9 @@ export async function addGratitude(gratitude) {
   let response = await pool.query(`INSERT INTO gratitude (gratitude, date, userId) VALUES ($1, $2, $3) RETURNING *;`, [gratitude.gratitude, gratitude.date, gratitude.userId]);
   return response.rows;
 }
+export async function deleteGratitudeById(id) {
+  const result = await pool.query(
+    `DELETE FROM gratitude WHERE id = ${id} RETURNING * ;`
+  );
+  return result;
+}

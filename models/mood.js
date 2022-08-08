@@ -10,3 +10,10 @@ export async function addMood(mood) {
   let response = await pool.query(`INSERT INTO mood (date, mood, whatmakesfeel, notes, userId) VALUES ($1, $2, $3, $4, $5) RETURNING *;`, [mood.date, mood.mood, mood.whatmakesfeel, mood.notes, mood.userId]);
   return response.rows;
 }
+
+export async function deleteMoodById(id) {
+    const result = await pool.query(
+      `DELETE FROM mood WHERE id = ${id} RETURNING * ;`
+    );
+    return result;
+  }
