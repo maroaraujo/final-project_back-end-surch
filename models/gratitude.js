@@ -3,12 +3,12 @@
 import { pool } from "../db/index.js";
 
 export async function getAllGratitude() {
-  let response = await pool.query(`SELECT * FROM gratitudetable;`);
+  let response = await pool.query(`SELECT * FROM gratitude;`);
   return response.rows;
 }
 
 export async function addGratitude(gratitude) {
-    console.log("New gratitude add is "+ gratitudetable.gratitude)
-  let response = await pool.query(`INSERT INTO gratitudetable (gratitude) VALUES ($1) RETURNING *;`, [gratitudetable.gratitude]);
+    console.log("New gratitude add is "+ gratitude.gratitude)
+  let response = await pool.query(`INSERT INTO gratitude (gratitude, date, userId) VALUES ($1, $2, $3) RETURNING *;`, [gratitude.gratitude, gratitude.date, gratitude.userId]);
   return response.rows;
 }
