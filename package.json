@@ -10,6 +10,7 @@
     "db:createGratitudeTable": "node -r dotenv/config ./db/scripts/createGratitudeTable.js",
     "db:dropGratitudeTable": "node -r dotenv/config ./db/scripts/dropGratitudeTable.js",
     "db:populateGratitudeTable": "node -r dotenv/config ./db/scripts/populateGratitudeTable.js",
+    "db:resetGratitudeTable": "npm run db:dropGratitudeTable && npm run db:createGratitudeTable && npm run db:populateGratitudeTable",
     "db:createMoodTable": "node -r dotenv/config ./db/scripts/createMoodTable.js",
     "db:dropMoodTable": "node -r dotenv/config ./db/scripts/dropMoodTable.js",
     "db:populateMoodTable": "node -r dotenv/config ./db/scripts/populateMoodTable.js"
