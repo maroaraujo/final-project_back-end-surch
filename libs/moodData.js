@@ -1,24 +1,27 @@
-const dummyData = [
+export const moodData = [
   {
     id: 0,
     date: "2022-07-27",
     mood: "great",
     whatmakesfeel: "I was on the beach",
     notes: "I was with family",
+    userId: 1
   },
   {
     id: 1,
     date: "2022-07-28",
     mood: "great",
-    whatmakesfeel: "I was on the beach",
-    notes: "I was with family",
+    whatmakesfeel: "went out for dinner",
+    notes: "spent time with family",
+    userId: 1
   },
   {
     id: 2,
     date: "2022-07-29",
     mood: "bad",
-    whatmakesfeel: "cough covid",
+    whatmakesfeel: "caught covid",
     notes: "",
+    userId: 1
   },
   {
     id: 3,
@@ -26,13 +29,15 @@ const dummyData = [
     mood: "ok",
     whatmakesfeel: "pains",
     notes: "didn't eat much",
+    userId: 1
   },
   {
     id: 4,
     date: "2022-07-31",
     mood: "ok",
-    whatmakesfeel: "",
+    whatmakesfeel: "normal day at the office",
     notes: "",
+    userId: 1
   },
   {
     id: 5,
@@ -40,6 +45,7 @@ const dummyData = [
     mood: "good",
     whatmakesfeel: "getting better",
     notes: "",
+    userId: 1
   },
   {
     id: 6,
@@ -47,19 +53,22 @@ const dummyData = [
     mood: "great",
     whatmakesfeel: "I was on the beach again",
     notes: "made some friends",
+    userId: 1
   },
   {
     id: 7,
     date: "2022-08-03",
     mood: "awful",
-    whatmakesfeel: "my friends cough covid",
+    whatmakesfeel: "my friends caught covid",
     notes: "my fault",
+    userId: 1
   },
   {
     id: 8,
     date: "2022-08-04",
     mood: "ok",
-    whatmakesfeel: "testing",
-    notes: "my fault",
+    whatmakesfeel: "normal day at work",
+    notes: "worked with Steven and Ismail",
+    userId: 1
   },
 ];

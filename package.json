@@ -13,7 +13,8 @@
     "db:resetGratitudeTable": "npm run db:dropGratitudeTable && npm run db:createGratitudeTable && npm run db:populateGratitudeTable",
     "db:createMoodTable": "node -r dotenv/config ./db/scripts/createMoodTable.js",
     "db:dropMoodTable": "node -r dotenv/config ./db/scripts/dropMoodTable.js",
-    "db:populateMoodTable": "node -r dotenv/config ./db/scripts/populateMoodTable.js"
+    "db:populateMoodTable": "node -r dotenv/config ./db/scripts/populateMoodTable.js",
+    "db:resetMoodTable": "npm run db:dropMoodTable && npm run db:createMoodTable && npm run db:populateMoodTable"
   },
   "repository": {
     "type": "git",
