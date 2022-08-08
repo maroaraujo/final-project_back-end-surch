@@ -23,6 +23,6 @@ app.get("/", (req, res) => {
 //app.listen(PORT, () => console.log(`listening ${PORT}`));
 // it is the same as bellow
 app.listen(PORT, function () {
-  console.log(`listening ${PORT}`);
+  //console.log(`listening ${PORT}`);
 });
 
