@@ -16,9 +16,9 @@ app.use("/gratitude", gratitudeRouter);
 
 app.use("/mood", moodRouter);
 
-// app.get("/", (req, res) => {
-//   res.json({ success: "true", payload: "test" });
-// });
+app.get("/", (req, res) => {
+  res.json({ success: "true", payload: "test" });
+});
 
 //app.listen(PORT, () => console.log(`listening ${PORT}`));
 // it is the same as bellow
