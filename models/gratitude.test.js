@@ -5,7 +5,6 @@ import request from "supertest";
 import assert from "assert";
 import app from "../app.js";
 import { pool } from "../db/index.js";
-import { resetMoodTable, resetGratitudeTable } from "../db/helpers.js";
 
 // removed --detectOpenHandles from test script and added below in order to remove JEST error
 beforeAll((done) => {
@@ -19,7 +18,7 @@ afterAll((done) => {
 
 test("GET request from /mood", async function () {
   let response = await request(app)
-    .get("https://reconnect-surch.herokuapp.com/mood")
+    .get("/mood")
     .set("Accept", "application/json");
 
   // HTTP response code;
@@ -33,15 +32,15 @@ test("GET request from /mood", async function () {
   );
 
   // whole users data
-  let expected = [
-    {
-      id: expect.any(Number),
-      gratitude: expect.any(String),
-      date: expect.any(Date),
-      userid: expect.any(Number),
-    },
-  ];
 
+  let expected = {
+    date: expect.any(Date),
+    id: expect.any(Number),
+    mood: expect.any(String),
+    notes: expect.any(String),
+    userid: expect.any(Number),
+    whatmakesfeel: expect.any(String),
+  };
   expect(response.body).toMatchObject({
     success: true,
     payload: expect.arrayContaining(expected),
