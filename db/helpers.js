@@ -1,33 +1,23 @@
 import { pool } from "./index.js";
-import { seedData } from "./seed-data.js";
-export async function createUsersTable() {
-  return await pool.query(
-    `CREATE TABLE IF NOT EXISTS users (
-      id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
-      username VARCHAR(30) NOT NULL
-    );`
-  );
-}
-export async function dropUsersTable() {
-  return await pool.query("DROP TABLE IF EXISTS users;");
-}
-export async function resetUsersTable() {
+import { populateGratitudeTable } from "./scripts/populateGratitudeTable.js";
+import { createGratitudeTable } from "./scripts/createGratitudeTable.js";
+import { dropGratitudeTable } from "./scripts/dropGratitudeTable.js";
+import { populateMoodTable } from "./scripts/populateMoodTable.js";
+import { createMoodTable } from "./scripts/createMoodTable.js";
+import { dropMoodTable } from "./scripts/dropMoodTable.js";
+
+export async function resetGratitudeTable() {
   return [
-    await dropUsersTable(),
-    await createUsersTable(),
-    await seedUsersTable(),
+    await dropGratitudeTable(),
+    await createGratitudeTable(),
+    await populateGratitudeTable(),
   ];
 }
-export async function seedUsersTable() {
-  /**
-   * Should be injection-resistant as we're just dynamically generating N placeholders (where N is how many items we're seeding).
-   *
-   * (Plus, we control the seed data. It hasn't come from the user/some third party/someone we can't trust/control.)
-   */
-  const safePlaceholders = seedData.map((_, i) => `($${i + 1})`).join(",\n");
-  const values = seedData.map((user) => user.username);
-  return await pool.query(
-    `INSERT INTO users (username) VALUES ${safePlaceholders} RETURNING *;`,
-    values
-  );
+
+export async function resetMoodTable() {
+  return [
+    await dropMoodTable(),
+    await createMoodTable(),
+    await populateMoodTable(),
+  ];
 }

@@ -1,11 +1,12 @@
 import { test, expect, describe } from "@jest/globals";
-import {getAllGratitude} from "./gratitude.js";
+import { getAllGratitude } from "./gratitude.js";
 
 import request from "supertest";
 import assert from "assert";
 import app from "../app.js";
 import { pool } from "../db/index.js";
 import { resetUsersTable } from "../db/helpers.js";
+
 // removed --detectOpenHandles from test script and added below in order to remove JEST error
 beforeAll((done) => {
   done();
@@ -119,21 +120,21 @@ describe("POST and DELETE requests", function () {
   });
 });
 
-
-// Initial test (works) 
+// Initial test (works)
 describe("GET all gratitude tests", () => {
   test("Check the structure of the payload, when sent a GET request for All profiles", async () => {
     //ARRANGE
-    const actual = await getAllGratitude()
+    const actual = await getAllGratitude();
     //ACT
     const expected = [];
-    for(let i=0; i<actual.length; i++){
+    for (let i = 0; i < actual.length; i++) {
       expected.push({
         id: expect.any(Number),
         gratitude: expect.any(String),
         date: expect.any(Date),
         userid: expect.any(Number),
-      })}
+      });
+    }
     //ASSERT
     expect(actual).toEqual(expected);
   });
