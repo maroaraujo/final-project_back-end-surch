@@ -1,10 +1,11 @@
 import express from "express";
-const app = express();
-const PORT = process.env.PORT || 5000;
 import cors from "cors";
 import gratitudeRouter from "./routes/gratitudeRouter.js";
 import moodRouter from "./routes/moodRouter.js";
 //import router
+
+const app = express();
+// const PORT = process.env.PORT || 5000;
 
 // CORS is used to connect the information from backend to frontend
 app.use(cors());
@@ -22,6 +23,6 @@ app.get("/", (req, res) => {
 
 //app.listen(PORT, () => console.log(`listening ${PORT}`));
 // it is the same as bellow
-app.listen(PORT, function () {
-  //console.log(`listening ${PORT}`);
-});
+// app.listen(PORT, function () {
+//   //console.log(`listening ${PORT}`);
+// });
