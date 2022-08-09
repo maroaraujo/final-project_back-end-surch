@@ -19,6 +19,8 @@ app.use("/gratitude", gratitudeRouter);
 
 app.use("/mood", moodRouter);
 
+export default app;
+
 // app.get("/", (req, res) => {
 //   res.json({ success: "true", payload: "test" });
 // });
