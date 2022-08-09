@@ -16,9 +16,9 @@ afterAll((done) => {
   done();
 });
 
-test("GET request from /mood", async function () {
+test("GET request from /gratitude", async function () {
   let response = await request(app)
-    .get("/mood")
+    .get("/gratitude")
     .set("Accept", "application/json");
 
   // HTTP response code;
@@ -31,16 +31,16 @@ test("GET request from /mood", async function () {
     })
   );
 
-  // whole users data
+  // whole gratitude data
+  const expected = [
+    {
+      id: expect.any(Number),
+      gratitude: expect.any(String),
+      date: expect.any(String),
+      userid: expect.any(Number),
+    },
+  ];
 
-  let expected = {
-    date: expect.any(Date),
-    id: expect.any(Number),
-    mood: expect.any(String),
-    notes: expect.any(String),
-    userid: expect.any(Number),
-    whatmakesfeel: expect.any(String),
-  };
   expect(response.body).toMatchObject({
     success: true,
     payload: expect.arrayContaining(expected),
