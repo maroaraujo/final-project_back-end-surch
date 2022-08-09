@@ -14,7 +14,8 @@
     "db:createMoodTable": "node -r dotenv/config ./db/scripts/createMoodTable.js",
     "db:dropMoodTable": "node -r dotenv/config ./db/scripts/dropMoodTable.js",
     "db:populateMoodTable": "node -r dotenv/config ./db/scripts/populateMoodTable.js",
-    "db:resetMoodTable": "npm run db:dropMoodTable && npm run db:createMoodTable && npm run db:populateMoodTable"
+    "db:resetMoodTable": "npm run db:dropMoodTable && npm run db:createMoodTable && npm run db:populateMoodTable",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --setupFiles dotenv/config"
   },
   "repository": {
     "type": "git",
@@ -28,10 +29,11 @@
   },
   "homepage": "https://github.com/SchoolOfCode/final-project_back-end-surch#readme",
   "dependencies": {
-    "dotenv": "^16.0.1",
-    "nodemon": "^2.0.19",
-    "pg": "^8.7.3",
     "cors": "^2.8.5",
-    "express": "^4.18.1"
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "jest": "^28.1.3",
+    "nodemon": "^2.0.19",
+    "pg": "^8.7.3"
   }
 }
