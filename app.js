@@ -5,6 +5,8 @@ import moodRouter from "./routes/moodRouter.js";
 //import router
 
 const app = express();
+app.use(express.urlencoded({ extended: false }));
+
 // const PORT = process.env.PORT || 5000;
 
 // CORS is used to connect the information from backend to frontend
