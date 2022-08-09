@@ -5,7 +5,6 @@ import moodRouter from "./routes/moodRouter.js";
 //import router
 
 const app = express();
-app.use(express.urlencoded({ extended: false }));
 
 // const PORT = process.env.PORT || 5000;
 
@@ -15,6 +14,7 @@ app.use(cors());
 // Unpack any json request, normally for POST,PUT
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 app.use("/gratitude", gratitudeRouter);
 
 app.use("/mood", moodRouter);
