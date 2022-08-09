@@ -7,7 +7,12 @@ import moodRouter from "./routes/moodRouter.js";
 const app = express();
 
 // CORS is used to connect the information from backend to frontend
-app.use(cors());
+const corsOptions = {
+  origin: "http://localhost:3000",
+  credentials: true, //access-control-allow-credentials:true
+  optionSuccessStatus: 200,
+};
+app.use(cors(corsOptions));
 
 // Unpack any json request, normally for POST,PUT
 
