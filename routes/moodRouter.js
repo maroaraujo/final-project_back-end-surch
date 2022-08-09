@@ -7,10 +7,10 @@ moodRouter.get("/", async function (req, res) {
   res.json({ success: true, payload: result });
 });
 
-moodRouter.post("/", async function (req, res) {
-  const result = await addMood(req.body);
-  res.json({ success: true, payload: result });
-});
+// moodRouter.post("/", async function (req, res) {
+//   const result = await addMood(req.body);
+//   res.json({ success: true, payload: result });
+// });
 
 moodRouter.delete("/:id", async function (req, res) {
   const searchedId = Number(req.params.id);
