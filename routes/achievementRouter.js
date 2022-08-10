@@ -8,8 +8,9 @@ achievementRouter.get("/", async function (req, res) {
   res.json({ success: true, payload: result });
 });
 
-achievementRouter.put("/", async function (req, res) {
-  const result = await updateAchievement(req.body);
+achievementRouter.put("/:id", async function (req, res) {
+  const searchedId = req.params.id;
+  const result = await updateAchievement(searchedId, req.body);
   res.json({ success: true, payload: result });
 });
 
