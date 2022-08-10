@@ -15,6 +15,10 @@
     "db:dropMoodTable": "node -r dotenv/config ./db/scripts/dropMoodTable.js",
     "db:populateMoodTable": "node -r dotenv/config ./db/scripts/populateMoodTable.js",
     "db:resetMoodTable": "npm run db:dropMoodTable && npm run db:createMoodTable && npm run db:populateMoodTable",
+    "db:createAchievementTable": "node -r dotenv/config ./db/scripts/createAchievementTable.js",
+    "db:dropAchievementTable": "node -r dotenv/config ./db/scripts/dropAchievementTable.js",
+    "db:populateAchievementTable": "node -r dotenv/config ./db/scripts/populateAchievementTable.js",
+    "db:resetAchievementTable": "npm run db:dropAchievementTable && npm run db:createAchievementTable && npm run db:populateAchievementTable",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --setupFiles dotenv/config"
   },
   "repository": {
