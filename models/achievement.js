@@ -7,17 +7,16 @@ export async function getAllAchievement() {
   return response.rows;
 }
 
-export async function updateAchievement(achievement) {
+export async function updateAchievement(achievement, userID) {
   console.log("New Achievement add is " + achievement.achievement);
   let response = await pool.query(
-    `UPDATE INTO achievement (achievement, userId) VALUES ($1, $2) RETURNING *;`,
-    [achievement.achievement, achievement.userId]
+    `UPDATE achievement SET achievement = ${achievement} WHERE userID = ${userID};`
   );
   return response.rows;
 }
-export async function deleteAchievementById(id) {
-  const result = await pool.query(
-    `DELETE FROM Achievement WHERE id = ${id} RETURNING * ;`
-  );
-  return result;
-}
+// export async function deleteAchievementById(id) {
+//   const result = await pool.query(
+//     `DELETE FROM Achievement WHERE id = ${id} RETURNING * ;`
+//   );
+//   return result;
+// }
