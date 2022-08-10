@@ -1,5 +1,5 @@
 import express from "express";
-import { getAllAchievement, updateAchievement } from "../models/achievement";
+import { getAllAchievement, updateAchievement } from "../models/achievement.js";
 
 const achievementRouter = express.Router();
 
