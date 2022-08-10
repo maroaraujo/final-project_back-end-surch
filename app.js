@@ -8,7 +8,7 @@ const app = express();
 
 // CORS is used to connect the information from backend to frontend
 const corsOptions = {
-  origin: "http://localhost:3000",
+  origin: "http://localhost:3000/home",
   credentials: true, //access-control-allow-credentials:true
   optionSuccessStatus: 200,
 };
