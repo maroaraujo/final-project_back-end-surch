@@ -3,7 +3,8 @@ import { pool } from "../index.js";
 export async function createAchievementTable() {
   return await pool.query(`CREATE TABLE IF NOT EXISTS achievement (
     id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
-    achievement INT,
+    achievement TEXT,
+    completion BOOLEAN,
     userId INT
  );`);
 }
