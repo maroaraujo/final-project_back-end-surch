@@ -7,10 +7,10 @@ export async function getAllAchievement() {
   return response.rows;
 }
 
-export async function updateAchievement(achievement, userID) {
+export async function updateAchievement(achievement) {
   console.log("New Achievement add is " + achievement.achievement);
   let response = await pool.query(
-    `UPDATE achievement SET achievement = ${achievement} WHERE userID = ${userID};`
+    `UPDATE achievement SET achievement = ${achievement.achievement} WHERE userID = ${achievement.userID};`
   );
   return response.rows;
 }
