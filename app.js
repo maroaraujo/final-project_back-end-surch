@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import gratitudeRouter from "./routes/gratitudeRouter.js";
 import moodRouter from "./routes/moodRouter.js";
+import achievementRouter from "./routes/achievementRouter.js";
 //import router
 
 const app = express();
@@ -36,5 +37,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use("/gratitude", gratitudeRouter);
 
 app.use("/mood", moodRouter);
+app.use("/achievement", achievementRouter);
 
 export default app;
