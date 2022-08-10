@@ -11,7 +11,10 @@ achievementRouter.get("/", async function (req, res) {
 achievementRouter.put("/:id", async function (req, res) {
   const searchedId = req.params.id;
   const result = await updateAchievement(searchedId, req.body);
-  res.json({ success: true, payload: result });
+  res.json({
+    success: true,
+    payload: `You have updated achievement with id: ${searchedId}`,
+  });
 });
 
 // achievementRouter.delete("/:id", async function (req, res) {
