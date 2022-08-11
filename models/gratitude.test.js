@@ -16,6 +16,21 @@ afterAll((done) => {
   done();
 });
 
+describe('POST /gratitude', function() {
+  it('responds with json', function(done) {
+    request(app)
+      .post('/gratitude')
+      .send({gratitude:"anything",date:"2022-02-03",userId:1})
+      .set('Accept', 'application/json')
+      .expect('Content-Type', /json/)
+      .expect(200)
+      .end(function(err, res) {
+        if (err) return done(err);
+        return done();
+      });
+  });
+});
+
 test("GET request from /gratitude", async function () {
   let response = await request(app)
     .get("/gratitude")
