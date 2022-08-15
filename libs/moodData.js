@@ -1,7 +1,7 @@
 export const moodData = [
   {
     id: 0,
-    date: "2022-07-27",
+    date: "2022-08-01",
     mood: "great",
     whatmakesfeel: "I was on the beach",
     notes: "I was with family",
@@ -9,7 +9,7 @@ export const moodData = [
   },
   {
     id: 1,
-    date: "2022-07-28",
+    date: "2022-08-02",
     mood: "great",
     whatmakesfeel: "went out for dinner",
     notes: "spent time with family",
@@ -17,7 +17,7 @@ export const moodData = [
   },
   {
     id: 2,
-    date: "2022-07-29",
+    date: "2022-08-03",
     mood: "bad",
     whatmakesfeel: "caught covid",
     notes: "",
@@ -25,7 +25,7 @@ export const moodData = [
   },
   {
     id: 3,
-    date: "2022-07-30",
+    date: "2022-08-04",
     mood: "ok",
     whatmakesfeel: "pains",
     notes: "didn't eat much",
@@ -33,7 +33,7 @@ export const moodData = [
   },
   {
     id: 4,
-    date: "2022-07-31",
+    date: "2022-08-05",
     mood: "ok",
     whatmakesfeel: "normal day at the office",
     notes: "",
@@ -41,7 +41,7 @@ export const moodData = [
   },
   {
     id: 5,
-    date: "2022-08-01",
+    date: "2022-08-06",
     mood: "good",
     whatmakesfeel: "getting better",
     notes: "",
@@ -49,7 +49,7 @@ export const moodData = [
   },
   {
     id: 6,
-    date: "2022-08-02",
+    date: "2022-08-07",
     mood: "great",
     whatmakesfeel: "I was on the beach again",
     notes: "made some friends",
@@ -57,7 +57,7 @@ export const moodData = [
   },
   {
     id: 7,
-    date: "2022-08-03",
+    date: "2022-08-08",
     mood: "awful",
     whatmakesfeel: "my friends caught covid",
     notes: "my fault",
@@ -65,7 +65,7 @@ export const moodData = [
   },
   {
     id: 8,
-    date: "2022-08-04",
+    date: "2022-08-09",
     mood: "ok",
     whatmakesfeel: "normal day at work",
     notes: "worked with Steven and Ismail",
