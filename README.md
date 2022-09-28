@@ -17,6 +17,8 @@
 - [API reference](#api-reference)
 - [Support and Feedback](#support-and-feedback)
 
+Our [Front-end repository](https://github.com/maroaraujo/final-project_front-end-surch).
+
 <br/>
 
 ---
